@@ -4,7 +4,7 @@ import React from "react";
 
 function page() {
   return (
-    <div className="w-full h-full">
+    <div className="w-full h-full motion-preset-expand">
       <ResumePage />
     </div>
   );

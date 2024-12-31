@@ -7,7 +7,7 @@ import project3 from "@/app/image/project3.jpg";
 
 export default function ProjectsPage() {
   return (
-    <div className="w-full absolute  flex flex-col justify-center items-start text-start px-12 overflow-hidden">
+    <div className="w-full absolute  flex flex-col justify-center items-start text-start px-12 overflow-hidden ">
       <h1 className="text-7xl my-4 text-[gray]">my works</h1>
 
       <div className="w-full  grid grid-flow-row-dense grid-cols-3 grid-rows-3 place-content-center place-items-center ">

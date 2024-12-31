@@ -75,7 +75,7 @@ function Layout({ children }) {
           </div>
           <BsCloudDownload className="my-4 text-[red] " />
         </div>
-        <div className="w-5/6 flex flex-col justify-end items-center text-[bold] ">
+        <div className="w-5/6 flex flex-col justify-end items-center text-[bold] motion-preset-shrink ">
           <Image src={backImg} className="w-full h-[750px] static " />
           <div className=" absolute flex flex-col justify-center items-center text-center text-[gray]">
             <h1 className="text-6xl tracking-widest">Sarok</h1>
@@ -105,7 +105,8 @@ function Layout({ children }) {
   [&::-webkit-scrollbar-thumb]:rounded-full
   [&::-webkit-scrollbar-thumb]:bg-[red]
   dark:[&::-webkit-scrollbar-track]:bg-neutral-700
-  dark:[&::-webkit-scrollbar-thumb]:bg-neutral-50"
+  dark:[&::-webkit-scrollbar-thumb]:bg-neutral-50
+  "
       >
         {children}
       </div>
