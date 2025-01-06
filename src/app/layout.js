@@ -69,7 +69,7 @@ export default function RootLayout({ children }) {
             </div>
           ) : (
             <Layout>
-              <div className="w-full h-full motion-preset-slide-right ">
+              <div className="w-full h-full motion-preset-slide-right max-[630px]:w-screen  max-[630px]:h-screen">
                 {children}
               </div>
             </Layout>

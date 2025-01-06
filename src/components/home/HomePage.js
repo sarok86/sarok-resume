@@ -7,15 +7,22 @@ import { MdOutlineSecurity } from "react-icons/md";
 
 function HomePage() {
   return (
-    <div className="w-full absolute  flex flex-col justify-start items-start text-start ">
-      <div className="w-full justify-start items-start text-start p-4 text-[gray]">
-        <h1 className="text-7xl my-4 ">about me</h1>
-        <div className="flex my-4 items-center text-center">
-          <span className="text-3xl text-[red]">17 years old</span>
-          <span className="text-3xl  text-[gray] m-2"> / </span>
-          <span className="text-3xl text-[red]">Sanandaj</span>
+    <div className="w-full absolute  flex flex-col justify-start items-start text-start  max-[630px]:pt-8 ">
+      <div className="w-full justify-start items-start text-start p-4 text-[gray] max-[630px]:text-3xl">
+        <h1 className="text-7xl my-4 max-[630px]:text-6xl">about me</h1>
+        <div className="flex my-4 items-center text-center ">
+          <span className="text-3xl max-[630px]:text-2xl text-[red]">
+            17 years old
+          </span>
+          <span className="text-3xl max-[630px]:text-2xl  text-[gray] m-2">
+            {" "}
+            /{" "}
+          </span>
+          <span className="text-3xl max-[630px]:text-2xl text-[red]">
+            Sanandaj
+          </span>
         </div>
-        <p className="text-2xl ">
+        <p className="text-2xl max-[630px]:text-justify">
           Prolific, full stack web developer with a passion for metrics and
           beating former Prototyped 25 new product features per year for Flexor,
           Inc. Decreased rework by 22% and costs by 15%. Consistently receive
@@ -27,12 +34,14 @@ function HomePage() {
       </div>
       <div className="w-full h-2 border-4 bg-[red] my-12"></div>
 
-      <div className="justify-start items-start text-start p-4  ">
-        <h1 className="text-7xl my-4 text-[gray]">my services</h1>
-        <div className="grid grid-cols-2">
+      <div className="justify-start items-start text-start p-4  max-[630px]:text-3xl">
+        <h1 className="text-7xl my-4 text-[gray] max-[630px]:text-6xl">
+          my services
+        </h1>
+        <div className="grid grid-cols-2 max-[630px]:grid-cols-1 max-[630px]:text-justify">
           <div className="m-4">
-            <RiComputerLine className="text-3xl text-[red] m-2" />
-            <span className="text-3xl text-[red] m-2">development</span>
+            <RiComputerLine className="text-3xl  text-[red] m-2" />
+            <span className="text-3xl  text-[red] m-2">development</span>
             <p className="text-2xl text-[gray]">
               Building a custom tailored solution based on your technical
               specification.
@@ -64,11 +73,13 @@ function HomePage() {
           </div>
         </div>
       </div>
-      <div className="w-full border-2 bg-white my-12"></div>
+      <div className="w-full h-2 border-4 bg-[red] my-12"></div>
 
       <div className="w-full justify-start items-start text-start p-4 ">
-        <h1 className="text-7xl my-4 text-[gray]">principal facts</h1>
-        <div className="w-full grid grid-cols-4 justify-center items-center text-center">
+        <h1 className="text-7xl my-4 text-[gray] max-[630px]:text-5xl">
+          principal facts
+        </h1>
+        <div className="w-full grid grid-cols-4 justify-center items-center text-center max-[630px]:grid-cols-2">
           <div>
             <span className="text-3xl text-[red] m-2">10</span>
             <p className="text-xl text-[gray] m-2 ">successful projects</p>
