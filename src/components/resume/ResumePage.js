@@ -7,7 +7,7 @@ import { Bar } from "react-chartjs-2";
 function ResumePage() {
   return (
     <div className="w-full absolute  flex flex-col justify-center items-start text-start px-12 ">
-      <h1 className="text-7xl mt-8 text-[gray]">Resume</h1>
+      <h1 className="text-7xl mt-8 text-[gray] max-[630px]:text-5xl">Resume</h1>
       <div className=" my-2">
         <div className="flex my-4 items-center text-center">
           <span className="text-3xl text-[red]">10 years in design</span>

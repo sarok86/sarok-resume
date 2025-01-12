@@ -6,15 +6,15 @@ import { Button, Group, Textarea, TextInput } from "@mantine/core";
 
 function ContactPage() {
   return (
-    <div className="w-full absolute  flex flex-col justify-start items-start text-start px-4">
+    <div className="w-full absolute  flex flex-col justify-start items-start text-start px-4 ">
       <div className="w-full justify-center items-center text-start p-4 text-[gray]">
-        <p className="text-2xl my-4">
+        <p className="text-2xl my-4 text-justify">
           If you have any questions regarding this privacy statement, the
           practices of this site or your dealings with me, please do not
           hesitate to contact at the above-mentioned address, e-mail address or
           phone number.
         </p>
-        <div className="grid grid-cols-2 gap-4 text-xl">
+        <div className="grid grid-cols-2 gap-4 text-xl max-[630px]:grid-cols-1">
           <div className="flex  justify-center items-center text-center">
             <IoLocationOutline className="text-[red] mx-1 text-3xl" />
             <p>Sanandaj</p>
@@ -36,7 +36,9 @@ function ContactPage() {
       <div className="w-full h-2 border-4 bg-[red] my-12"></div>
 
       <div className="w-full  justify-start items-start text-start p-4 ">
-        <h1 className="text-7xl my-4 text-[gray]">Send Message</h1>
+        <h1 className="text-7xl my-4 text-[gray] max-[630px]:text-5xl max-[1020px]:text-6xl max-[630px]:pt-4">
+          Send Message
+        </h1>
         <form className="flex flex-col bg-none py-4">
           <input
             placeholder="First Name"
