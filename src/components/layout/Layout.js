@@ -48,15 +48,15 @@ function Layout({ children }) {
         onClose={handleClose}
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
-        className="flex justify-center items-center text-center"
+        className="flex justify-center items-center text-center rounded-lg "
         closeAfterTransition
         disablePortal
         disableEnforceFocus
         disableAutoFocus
       >
         <Box
-          className="w-3/4 h-3/6 flex flex-col justify-center items-center text-center bg-[gray]
-          max-[1020px]:text-3xl max-[760px]:text-xl text-[black] relative"
+          className="w-3/4 h-3/6 flex flex-col justify-center items-center text-center bg-[black]
+          max-[1020px]:text-3xl max-[760px]:text-xl text-[gray] relative "
         >
           <button
             onClick={handleClose}

@@ -56,7 +56,7 @@ export default function RootLayout({ children }) {
       </head>
       <MantineProvider theme={theme}>
         <body
-          className={`${geistSans.variable} ${geistMono.variable}  antialiased w-screen h-screen  flex justify-center items-stretch text-center px-36 py-28 overflow-hidden bg-[url('image/blackandwhite2.jpg')]`}
+          className={`${geistSans.variable} ${geistMono.variable}  antialiased w-screen h-screen  flex justify-center items-stretch text-center lg:px-36  overflow-hidden bg-[url('image/blackandwhite2.jpg')]`}
         >
           {loader ? (
             <div className="flex justify-center items-center ">
