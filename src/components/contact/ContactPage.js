@@ -17,20 +17,20 @@ function ContactPage() {
         <div className="grid grid-cols-2 gap-4 text-xl max-[630px]:grid-cols-1">
           <div className="flex  justify-center items-center text-center">
             <IoLocationOutline className="text-[red] mx-1 text-3xl" />
-            <p>Sanandaj</p>
+            <p>Iran,Sanandaj</p>
           </div>
           <div className="flex justify-center items-center text-center">
             <MdOutlineMailOutline className="text-[red]  mx-1 text-3xl" />
-            <p>Saruk@gmail.com</p>
+            <p>saruk.dastkhosh5186@gmail.com</p>
           </div>
           <div className="flex justify-center items-center text-center">
             <FiPhone className="text-[red] mx-1 text-3xl" />
-            <p>Sanandaj</p>
+            <p>09182481037</p>
           </div>
-          <div className="flex justify-center items-center text-center">
+          {/* <div className="flex justify-center items-center text-center">
             <IoLocationOutline className="text-[red] mx-1 text-3xl" />
             <p>Sanandaj</p>
-          </div>
+          </div> */}
         </div>
       </div>
       <div className="w-full h-2 border-4 bg-[red] my-12"></div>

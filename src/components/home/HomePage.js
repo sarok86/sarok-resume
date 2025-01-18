@@ -9,7 +9,9 @@ function HomePage() {
   return (
     <div className="w-full absolute  flex flex-col justify-start items-start text-start  max-[630px]:pt-4">
       <div className="w-full justify-start items-start text-start px-4 text-[gray] max-[630px]:text-3xl">
-        <h1 className="text-7xl my-4 max-[630px]:text-6xl max-[630px]:pt-4">about me</h1>
+        <h1 className="text-7xl my-4 max-[630px]:text-6xl max-[630px]:pt-4">
+          about me
+        </h1>
         <div className="flex my-4 items-center text-center ">
           <span className="text-3xl max-[630px]:text-2xl text-[red]">
             17 years old

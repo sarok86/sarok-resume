@@ -6,17 +6,17 @@ import { Bar } from "react-chartjs-2";
 
 function ResumePage() {
   return (
-    <div className="w-full absolute  flex flex-col justify-center items-start text-start px-12 ">
-      <h1 className="text-7xl mt-8 text-[gray] max-[630px]:text-5xl">Resume</h1>
+    <div className="w-full absolute  flex flex-col justify-center items-start text-start px-4 ">
+      <h1 className="text-7xl mt-8 text-[gray] max-[630px]:text-54l">Resume</h1>
       <div className=" my-2">
         <div className="flex my-4 items-center text-center">
-          <span className="text-3xl text-[red]">10 years in design</span>
-          <span className="text-3xl  text-[gray] m-2"> / </span>
-          <span className="text-3xl text-[red]">6 years in coding</span>
-          <span className="text-3xl  text-[gray] m-2"> / </span>
-          <span className="text-3xl text-[red]">master`s degree</span>
+          <span className="text-3xl max-[630px]:text-xl text-[red]">10 years in design</span>
+          <span className="text-3xl max-[630px]:text-xl  text-[gray] m-2"> / </span>
+          <span className="text-3xl max-[630px]:text-xl text-[red]">6 years in coding</span>
+          <span className="text-3xl max-[630px]:text-xl  text-[gray] m-2"> / </span>
+          <span className="text-3xl max-[630px]:text-xl text-[red]">master`s degree</span>
         </div>
-        <p className="text-2xl text-[gray]">
+        <p className="text-2xl text-[gray] text-justify">
           Web Developer with 10 years of experience in designing and developing
           user interfaces, testing, debugging, and training staff within
           eCommerce technologies. Proven ability in optimizing web functionality
@@ -27,10 +27,10 @@ function ResumePage() {
 
       <div className="w-full">
         <h1 className="w-full flex items-center text-center text-6xl mt-8 text-[gray]">
-          <SlSpeedometer className="text-5xl text-[red] m-3" />
+          <SlSpeedometer className="text-5xl text-[red] m-3 max-[630px]:text-5xl" />
           Skills
         </h1>
-        <div className="w-full text-[gray] px-12 mt-3">
+        <div className="w-full text-[gray] px-4 mt-3">
           <div className="my-8">
             <div className="w-full flex justify-between text-2xl">
               <p>web development</p>

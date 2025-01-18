@@ -48,7 +48,7 @@ function Layout({ children }) {
         onClose={handleClose}
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
-        className="flex justify-center items-center text-center rounded-lg "
+        className="flex justify-center items-center text-center "
         closeAfterTransition
         disablePortal
         disableEnforceFocus
@@ -56,7 +56,7 @@ function Layout({ children }) {
       >
         <Box
           className="w-3/4 h-3/6 flex flex-col justify-center items-center text-center bg-[black]
-          max-[1020px]:text-3xl max-[760px]:text-xl text-[gray] relative "
+          max-[1020px]:text-3xl max-[760px]:text-xl text-[gray] relative border-4 border-[gray] rounded-2xl"
         >
           <button
             onClick={handleClose}
@@ -100,7 +100,7 @@ function Layout({ children }) {
     max-[1020px]:w-screen max-[1020px]:h-screen  max-[630px]:bg-[black] max-[630px]:text-2xl"
       >
         <div
-          className="w-1/6 lg:w-full    max-[1020px]:h-auto  
+          className="w-1/6 lg:w-full    max-[1020px]:h-auto lg:px-8 
          max-[1020px]:relative  flex justify-between max-[630px]:text-2xl text-4xl
          items-center text-center  text-[gray] 
          bg-[black] max-[768px]:w-full  max-[768px]:relative max-[768px]:px-8
