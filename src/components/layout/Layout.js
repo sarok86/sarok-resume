@@ -22,11 +22,18 @@ import ResumePage from "../resume/ResumePage";
 import { usePathname } from "next/navigation";
 
 import { CiMenuBurger } from "react-icons/ci";
+import { GrLanguage } from "react-icons/gr";
 import menuBar from "./menuBar";
 import { Box, Button, Modal, Typography } from "@mui/material";
 import { IoMdClose } from "react-icons/io";
 
-function Layout({ children }) {
+import "@/i18n";
+import { useTranslation } from "react-i18next";
+import { Menu } from "@mantine/core";
+
+function Layout({ children, setLanguage }) {
+  const { t, i18n } = useTranslation();
+
   const path = usePathname();
   const width = window.innerWidth;
   const [value, setValue] = useState(false);
@@ -40,6 +47,23 @@ function Layout({ children }) {
       setValue(true);
     }
   }, [width]);
+
+  const langHandler = (e) => {
+    // e.preventDefault();
+    // console.log(e);
+    const language = e.target.textContent;
+    if (language === "English") {
+      // window.navigator.language === "en";
+      i18n.changeLanguage("en");
+      setLanguage("en");
+    } else if (language === "فارسی") {
+      i18n.changeLanguage("fa");
+      setLanguage("fa");
+    } else {
+      i18n.changeLanguage("ku");
+      setLanguage("ku");
+    }
+  };
 
   return (
     <>
@@ -100,7 +124,7 @@ function Layout({ children }) {
     max-[1020px]:w-screen max-[1020px]:h-screen  max-[630px]:bg-[black] max-[630px]:text-2xl"
       >
         <div
-          className="w-1/6 lg:w-full    max-[1020px]:h-auto lg:px-8 
+          className="w-1/6 lg:w-full    max-[1020px]:h-auto lg:px-12 
          max-[1020px]:relative  flex justify-between max-[630px]:text-2xl text-4xl
          items-center text-center  text-[gray] 
          bg-[black] max-[768px]:w-full  max-[768px]:relative max-[768px]:px-8
@@ -112,7 +136,7 @@ function Layout({ children }) {
         lg:justify-between lg:w-full lg:px-8"
           > */}
           <div className="my-4 text-[gray] hover:text-[red]">
-            <h1 className="text-[red]">Saruk</h1>
+            <h1 className="text-[red]">{t("title")}</h1>
           </div>
           <div className="my-4 text-3xl max-[768px]:flex lg:flex  ">
             {value ? (
@@ -156,6 +180,57 @@ function Layout({ children }) {
                     <TfiBag className="mb-4 hover:text-[red] mx-2" />
                   </Link>
                 )}
+                <div className=" text-4xl  flex justify-start items-start text-start">
+                  <Menu
+                    shadow="md"
+                    width={200}
+                    openDelay={100}
+                    closeDelay={400}
+                    transitionProps={{
+                      transition: "rotate-right",
+                      duration: 150,
+                    }}
+                  >
+                    <Menu.Target>
+                      <Button style={{ padding: "0px", width: "0px" }}>
+                        <GrLanguage className="text-3xl hover:text-[red] text-[gray] mx-2 mt-1" />
+                      </Button>
+                    </Menu.Target>
+                    <div className="bg-[#ff0000]">
+                      <Menu.Dropdown
+                        style={{
+                          backgroundColor: "#000000",
+                          fontSize: "1.5rem",
+                        }}
+                      >
+                        <Menu.Label color="#ff0000">
+                          <p className="text-xl text-[red]">Language</p>
+                        </Menu.Label>
+                        <button className="w-full " onClick={langHandler}>
+                          <Menu.Item color="#ff0000">
+                            <p className="text-xl hover:text-[red] text-[gray]">
+                              English
+                            </p>
+                          </Menu.Item>
+                        </button>
+                        <button className="w-full  " onClick={langHandler}>
+                          <Menu.Item color="#ff0000">
+                            <p className="text-xl hover:text-[red] text-[gray]">
+                              فارسی
+                            </p>
+                          </Menu.Item>
+                        </button>
+                        <button className="w-full  " onClick={langHandler}>
+                          <Menu.Item color="#ff0000">
+                            <p className="text-xl hover:text-[red] text-[gray]">
+                              کوردی
+                            </p>
+                          </Menu.Item>
+                        </button>
+                      </Menu.Dropdown>
+                    </div>
+                  </Menu>
+                </div>
               </div>
             ) : (
               <div className="bg-none ">

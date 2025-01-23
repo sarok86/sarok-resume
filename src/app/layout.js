@@ -7,7 +7,10 @@ import { createTheme, MantineProvider } from "@mantine/core";
 import Layout from "@/components/layout/Layout";
 import React, { useEffect, useState } from "react";
 import { FallingLines } from "react-loader-spinner";
-// import blackandwhite from "@/app/image/black and white.jpg";
+
+import "@/i18n";
+import { useTranslation } from "react-i18next";
+import { changeLanguage } from "i18next";
 
 const theme = createTheme({
   /** Put your mantine theme override here */
@@ -30,6 +33,12 @@ const geistMono = localFont({
 // };
 
 export default function RootLayout({ children }) {
+  const { t, i18n } = useTranslation();
+
+  const [language, setLanguage] = useState("");
+
+  // console.log(window);
+
   const [loader, setLoader] = useState(true);
 
   useEffect(() => {
@@ -38,8 +47,13 @@ export default function RootLayout({ children }) {
     }, 3000);
   }, []);
 
+  useEffect(() => {
+    i18n.changeLanguage(navigator.language);
+    setLanguage(clientInformation.language);
+  }, []);
+
   return (
-    <html lang="en">
+    <html lang={`${language}`} dir={language === "en" ? "ltr" : "rtl"}>
       <head>
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -68,7 +82,7 @@ export default function RootLayout({ children }) {
               />
             </div>
           ) : (
-            <Layout>
+            <Layout setLanguage={setLanguage}>
               <div className="w-full h-full motion-preset-slide-right max-[630px]:w-screen  max-[630px]:h-screen">
                 {children}
               </div>

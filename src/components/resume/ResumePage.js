@@ -7,7 +7,7 @@ import { Bar } from "react-chartjs-2";
 function ResumePage() {
   return (
     <div className="w-full absolute  flex flex-col justify-center items-start text-start px-4 ">
-      <h1 className="text-7xl mt-8 text-[gray] max-[630px]:text-54l">Resume</h1>
+      <h1 className="text-7xl mt-8 text-[gray] max-[630px]:text-4xl">Resume</h1>
       <div className=" my-2">
         <div className="flex my-4 items-center text-center">
           <span className="text-3xl max-[630px]:text-xl text-[red]">10 years in design</span>
@@ -25,8 +25,8 @@ function ResumePage() {
       </div>
       <div className="w-full h-2 border-4 bg-[red] my-12"></div>
 
-      <div className="w-full">
-        <h1 className="w-full flex items-center text-center text-6xl mt-8 text-[gray]">
+      <div className="w-full max-[630px]:mb-8">
+        <h1 className="w-full flex items-center text-center text-6xl mt-8 text-[gray] max-[630px]:text-4xl">
           <SlSpeedometer className="text-5xl text-[red] m-3 max-[630px]:text-5xl" />
           Skills
         </h1>
