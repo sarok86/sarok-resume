@@ -42,6 +42,41 @@ i18next.use(initReactI18next).init({
             div4: { p1: 10, p2: "keyboards broken" },
           },
         },
+        contactPage: {
+          p: "If you have any questions, you can contact me in the following ways:",
+          div1: {
+            div1: {
+              p: "Iran,Sanandaj",
+            },
+            div2: {
+              p: "09182481037",
+            },
+          },
+          div2: {
+            title: "Send Message",
+            form: {
+              input1: "First Name",
+              input2: "Last Name",
+              input3: "Email",
+              text: "Message",
+              button: "Submit",
+            },
+          },
+        },
+        projectPage: {
+          title: "my works",
+        },
+        resumePage: {
+          title: "Resume",
+          div1: {
+            sp1: "2 years in design",
+            sp2: "2 years in coding",
+          },
+          p: "Web Developer with 2 years of experience in designing and developing user interfaces, testing, debugging, and training staff within eCommerce technologies. Proven ability in optimizing web functionality that improve data retrieval and workflow efficiencies.",
+          div2: {
+            title: "Skills",
+          },
+        },
       },
     },
     fa: {
@@ -81,6 +116,41 @@ i18next.use(initReactI18next).init({
             div4: { p1: 10, p2: "صفحه کلید شکسته" },
           },
         },
+        contactPage: {
+          p: "اگر سوالی دارید می توانید از راه های زیر با من در تماس باشید:",
+          div1: {
+            div1: {
+              p: "ایران، سنندج",
+            },
+            div2: {
+              p: "۰۹۱۸۲۴۸۱۰۳۷",
+            },
+          },
+          div2: {
+            title: "ارسال پیام",
+            form: {
+              input1: "نام",
+              input2: "نام خانوادگی",
+              input3: "ایمیل",
+              text: "پیام",
+              button: "ارسال",
+            },
+          },
+        },
+        projectPage: {
+          title: "آثار من",
+        },
+        resumePage: {
+          title: "رزومه",
+          div1: {
+            sp1: "2 سال در طراحی",
+            sp2: "2 سال کد نویسی",
+          },
+          p: "توسعه دهنده وب با 2 سال تجربه در طراحی و توسعه رابط های کاربری، تست، اشکال زدایی و آموزش کارکنان در فناوری های تجارت الکترونیک. توانایی اثبات شده در بهینه سازی عملکرد وب که بازیابی داده ها و کارایی گردش کار را بهبود می بخشد.",
+          div2: {
+            title: "مهارت ها",
+          },
+        },
       },
     },
     ku: {
@@ -118,6 +188,41 @@ i18next.use(initReactI18next).init({
             div2: { p1: 10, p2: "موکلیمانی دڵخۆش" },
             div3: { p1: 10, p2: "خەڵاتەکان بەدەست هێنران" },
             div4: { p1: 10, p2: "کیبۆردەکان شکاون" },
+          },
+        },
+        contactPage: {
+          p: "هەر پرسیارێکتان هەیە دەتوانن بەم ڕێگایانەی خوارەوە پەیوەندیم پێوە بکەن:",
+          div1: {
+            div1: {
+              p: "ئێران،سنە",
+            },
+            div2: {
+              p: "۰۹۱۸۲۴۸۱۰۳۷",
+            },
+          },
+          div2: {
+            title: "نامە بنێرە",
+            form: {
+              input1: "ناوی یەکەم",
+              input2: "ناوی کۆتایی",
+              input3: "ئیمەیڵ",
+              text: "پەیام",
+              button: "پێشکەشکردن",
+            },
+          },
+        },
+        projectPage: {
+          title: "کارەکانم",
+        },
+        resumePage: {
+          title: "دەستپێکردنەوە",
+          div1: {
+            sp1: "٢ ساڵ لە دیزاین",
+            sp2: "٢ ساڵ لە کۆدکردن",
+          },
+          p: "گەشەپێدەری وێب بە ئەزموونی ٢ ساڵ لە دیزاینکردن و پەرەپێدانی ڕووکاری بەکارهێنەر، تاقیکردنەوە، چاکسازی، و ڕاهێنانی ستاف لە چوارچێوەی تەکنەلۆژیاکانی بازرگانی ئەلیکترۆنی. توانای سەلمێنراو لە باشکردنی کارایی وێب کە وەرگرتنەوەی داتا و کاراییەکانی وەرکفڵۆ باشتر دەکات.",
+          div2: {
+            title: "کارامەییەکان",
           },
         },
       },

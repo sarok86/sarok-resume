@@ -4,31 +4,37 @@ import { SlSpeedometer } from "react-icons/sl";
 import { Chart as ChartJS } from "chart.js";
 import { Bar } from "react-chartjs-2";
 
+import "@/i18n";
+import { useTranslation } from "react-i18next";
+
 function ResumePage() {
+  const { t, i18n } = useTranslation();
+
   return (
     <div className="w-full absolute  flex flex-col justify-center items-start text-start px-4 ">
-      <h1 className="text-7xl mt-8 text-[gray] max-[630px]:text-4xl">Resume</h1>
+      <h1 className="text-7xl mt-8 text-[gray] max-[630px]:text-4xl">
+        {t("resumePage.title")}
+      </h1>
       <div className=" my-2">
         <div className="flex my-4 items-center text-center">
-          <span className="text-3xl max-[630px]:text-xl text-[red]">10 years in design</span>
-          <span className="text-3xl max-[630px]:text-xl  text-[gray] m-2"> / </span>
-          <span className="text-3xl max-[630px]:text-xl text-[red]">6 years in coding</span>
-          <span className="text-3xl max-[630px]:text-xl  text-[gray] m-2"> / </span>
-          <span className="text-3xl max-[630px]:text-xl text-[red]">master`s degree</span>
+          <span className="text-3xl max-[630px]:text-xl text-[red]">
+            {t("resumePage.div1.sp1")}
+          </span>
+          <span className="text-3xl max-[630px]:text-xl  text-[gray] m-2">
+            /
+          </span>
+          <span className="text-3xl max-[630px]:text-xl text-[red]">
+            {t("resumePage.div1.sp2")}
+          </span>
         </div>
-        <p className="text-2xl text-[gray] text-justify">
-          Web Developer with 10 years of experience in designing and developing
-          user interfaces, testing, debugging, and training staff within
-          eCommerce technologies. Proven ability in optimizing web functionality
-          that improve data retrieval and workflow efficiencies.
-        </p>
+        <p className="text-2xl text-[gray] text-justify">{t("resumePage.p")}</p>
       </div>
       <div className="w-full h-2 border-4 bg-[red] my-12"></div>
 
       <div className="w-full max-[630px]:mb-8">
         <h1 className="w-full flex items-center text-center text-6xl mt-8 text-[gray] max-[630px]:text-4xl">
           <SlSpeedometer className="text-5xl text-[red] m-3 max-[630px]:text-5xl" />
-          Skills
+          {t("resumePage.div2.title")}
         </h1>
         <div className="w-full text-[gray] px-4 mt-3">
           <div className="my-8">
