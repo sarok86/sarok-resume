@@ -13,28 +13,20 @@ import { useTranslation } from "react-i18next";
 import { changeLanguage } from "i18next";
 
 // import { Roboto } from "next/font/google";
-import { Noto_Naskh_Arabic } from "next/font/google";
+// import { Noto_Naskh_Arabic } from "next/font/google";
 
 const theme = createTheme({
   /** Put your mantine theme override here */
 });
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
+const roboto = localFont({
+  src: "./fonts/Roboto-VariableFont_wdth,wght.ttf",
+  variable: "--font-roboto",
+  weight: "400",
 });
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
-
-// const roboto = Roboto({
-//   weight: "400",
-//   subsets: ["latin"],
-// });
-const noto = Noto_Naskh_Arabic({
+const noto = localFont({
+  src: "./fonts/NotoNaskhArabic-VariableFont_wght.ttf",
+  variable: "--font-noto",
   weight: "400",
 });
 
@@ -81,7 +73,7 @@ export default function RootLayout({ children }) {
       </head>
       <MantineProvider theme={theme}>
         <body
-          className={` ${noto.className}   antialiased w-screen h-screen  flex justify-center items-stretch text-center lg:px-36  overflow-hidden bg-[url('image/blackandwhite2.jpg')]`}
+          className={`${roboto.className} ${noto.className}   antialiased w-screen h-screen  flex justify-center items-stretch text-center lg:px-36  overflow-hidden bg-[url('image/blackandwhite2.jpg')]`}
         >
           {loader ? (
             <div className="flex justify-center items-center ">
