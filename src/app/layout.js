@@ -12,7 +12,7 @@ import "@/i18n";
 import { useTranslation } from "react-i18next";
 import { changeLanguage } from "i18next";
 
-import { Roboto } from "next/font/google";
+// import { Roboto } from "next/font/google";
 import { Noto_Naskh_Arabic } from "next/font/google";
 
 const theme = createTheme({
@@ -30,10 +30,10 @@ const geistMono = localFont({
   weight: "100 900",
 });
 
-const roboto = Roboto({
-  weight: "400",
-  subsets: ["latin"],
-});
+// const roboto = Roboto({
+//   weight: "400",
+//   subsets: ["latin"],
+// });
 const noto = Noto_Naskh_Arabic({
   weight: "400",
 });
@@ -81,7 +81,7 @@ export default function RootLayout({ children }) {
       </head>
       <MantineProvider theme={theme}>
         <body
-          className={`${roboto.className} ${noto.className}   antialiased w-screen h-screen  flex justify-center items-stretch text-center lg:px-36  overflow-hidden bg-[url('image/blackandwhite2.jpg')]`}
+          className={` ${noto.className}   antialiased w-screen h-screen  flex justify-center items-stretch text-center lg:px-36  overflow-hidden bg-[url('image/blackandwhite2.jpg')]`}
         >
           {loader ? (
             <div className="flex justify-center items-center ">
