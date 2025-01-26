@@ -233,7 +233,58 @@ function Layout({ children, setLanguage }) {
                 </div>
               </div>
             ) : (
-              <div className="bg-none ">
+              <div className="bg-none flex ">
+                <div className=" text-4xl  flex justify-center items-center text-center">
+                  <Menu
+                    shadow="md"
+                    width={200}
+                    openDelay={100}
+                    closeDelay={400}
+                    transitionProps={{
+                      transition: "rotate-right",
+                      duration: 150,
+                    }}
+                  >
+                    <Menu.Target>
+                      <Button style={{ padding: "0px", width: "0px" }}>
+                        <GrLanguage className="text-3xl hover:text-[red] text-[gray] mx-2 mt-1" />
+                      </Button>
+                    </Menu.Target>
+                    <div className="bg-[#ff0000]">
+                      <Menu.Dropdown
+                        style={{
+                          backgroundColor: "#000000",
+                          fontSize: "1.5rem",
+                        }}
+                      >
+                        <Menu.Label color="#ff0000">
+                          <p className="text-xl text-[red]">Language</p>
+                        </Menu.Label>
+                        <button className="w-full " onClick={langHandler}>
+                          <Menu.Item color="#ff0000">
+                            <p className="text-xl hover:text-[red] text-[gray]">
+                              English
+                            </p>
+                          </Menu.Item>
+                        </button>
+                        <button className="w-full  " onClick={langHandler}>
+                          <Menu.Item color="#ff0000">
+                            <p className="text-xl hover:text-[red] text-[gray]">
+                              فارسی
+                            </p>
+                          </Menu.Item>
+                        </button>
+                        <button className="w-full  " onClick={langHandler}>
+                          <Menu.Item color="#ff0000">
+                            <p className="text-xl hover:text-[red] text-[gray]">
+                              کوردی
+                            </p>
+                          </Menu.Item>
+                        </button>
+                      </Menu.Dropdown>
+                    </div>
+                  </Menu>
+                </div>
                 <Button onClick={handleOpen}>
                   <CiMenuBurger className="text-4xl text-[red]  max-[630px]:text-3xl" />
                 </Button>
