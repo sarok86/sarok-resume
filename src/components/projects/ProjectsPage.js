@@ -14,7 +14,7 @@ export default function ProjectsPage() {
 
   return (
     <div className="w-full absolute  flex flex-col justify-center items-start text-start px-12 overflow-hidden ">
-      <h1 className="text-7xl my-4 text-[gray] max-[630px]:text-5xl">
+      <h1 className="text-7xl my-4 text-[gray] max-[630px]:text-5xl max-[630px]:mt-16">
         {t("projectPage.title")}
       </h1>
 
