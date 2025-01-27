@@ -20,7 +20,7 @@ function ContactPage() {
             <IoLocationOutline className="text-[red] mx-1 text-3xl" />
             <p>{t("contactPage.div1.div1.p")}</p>
           </div>
-          <div className="w-full flex justify-center items-center text-center ">
+          <div className="w-full flex justify-center items-center text-center  max-[630px]:text-lg">
             <MdOutlineMailOutline className="text-[red]  mx-1 text-3xl" />
             <p>saruk.dastkhosh5186@gmail.com</p>
           </div>

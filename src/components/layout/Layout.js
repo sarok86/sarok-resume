@@ -31,12 +31,17 @@ import "@/i18n";
 import { useTranslation } from "react-i18next";
 import { Menu } from "@mantine/core";
 
+import { IoMoonOutline } from "react-icons/io5";
+import { MdOutlineWbSunny } from "react-icons/md";
+
 function Layout({ children, setLanguage }) {
   const { t, i18n } = useTranslation();
 
   const path = usePathname();
   const width = window.innerWidth;
   const [value, setValue] = useState(false);
+
+  const [color, setColor] = useState("black");
 
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
@@ -62,6 +67,15 @@ function Layout({ children, setLanguage }) {
     } else {
       i18n.changeLanguage("ku");
       setLanguage("ku");
+    }
+  };
+
+  const changeHandler = () => {
+    console.log(color);
+    if (color === "black") {
+      setColor("white");
+    } else if (color === "white") {
+      setColor("black");
     }
   };
 
@@ -120,23 +134,27 @@ function Layout({ children, setLanguage }) {
         </Box>
       </Modal>
       <div
-        className="w-full z-0  h-full  flex justify-center items-center text-center   bg-[black] rounded-lg max-[768px]:flex-col lg:flex-col
-    max-[1020px]:w-screen max-[1020px]:h-screen  max-[630px]:bg-[black] max-[630px]:text-2xl"
+        className={`w-full z-0  h-full  flex justify-center items-center text-center   
+          rounded-lg max-[768px]:flex-col lg:flex-col
+    max-[1020px]:w-screen max-[1020px]:h-screen   max-[630px]:text-2xl  `}
       >
         <div
-          className="w-1/6 lg:w-full    max-[1020px]:h-auto lg:px-12 
+          className={`w-1/6 lg:w-full    max-[1020px]:h-auto lg:px-12 
          max-[1020px]:relative  flex justify-between max-[630px]:text-2xl text-4xl
          items-center text-center  text-[gray] 
          bg-[black] max-[768px]:w-full  max-[768px]:relative max-[768px]:px-8
-         "
+         ${color === "white" ? "bg-[white]" : "bg-[black]"} `}
         >
           {/* <div
             className="w-1/6 h-full flex  justify-around items-center text-5xl  text-center max-[768px]:w-full  max-[1020px]:items-center max-[1020px]:text-center  max-[1020px]:flex  max-[1020px]:justify-between max-[1020px]:absolute max-[1020px]:top-0 max-[1020px]:px-8 
         max-[630px]:text-3xl max-[630px]:h-2/6 max-[1020px]:h-3/6    
         lg:justify-between lg:w-full lg:px-8"
           > */}
-          <div className="my-4 text-[gray] hover:text-[red]">
+          <div className="flex justify-center items-center text-center my-4 text-[gray] hover:text-[red]">
             <h1 className="text-[red]">{t("title")}</h1>
+            <button onClick={changeHandler} className="mx-4 mb-3">
+              {color === "black" ? <IoMoonOutline /> : <MdOutlineWbSunny />}
+            </button>
           </div>
           <div className="my-4 text-3xl max-[768px]:flex lg:flex  ">
             {value ? (
@@ -318,14 +336,16 @@ function Layout({ children, setLanguage }) {
         </div>
 
         <div
-          className="w-4/6 h-full relative  overflow-y-auto   flex justify-center items-center text-center bg-[black] [&::-webkit-scrollbar]:w-2
+          className={`w-4/6 h-full relative  overflow-y-auto   flex justify-center items-center text-center  [&::-webkit-scrollbar]:w-2
   [&::-webkit-scrollbar-track]:rounded-full
   [&::-webkit-scrollbar-track]:bg-gray-100
   [&::-webkit-scrollbar-thumb]:rounded-full
   [&::-webkit-scrollbar-thumb]:bg-[red]
   dark:[&::-webkit-scrollbar-track]:bg-neutral-700
   dark:[&::-webkit-scrollbar-thumb]:bg-neutral-50
- max-[1020px]:w-screen  max-[1020px]:h-full     lg:w-full"
+ max-[1020px]:w-screen  max-[1020px]:h-full     lg:w-full ${
+   color === "white" ? "bg-[white]" : "bg-[black]"
+ }`}
         >
           {children}
         </div>
