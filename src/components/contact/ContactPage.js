@@ -8,6 +8,7 @@ import { Button, Group, Textarea, TextInput } from "@mantine/core";
 import "@/i18n";
 import { useTranslation } from "react-i18next";
 import Iframe from "react-iframe";
+import Link from "next/link";
 
 function ContactPage() {
   const { t, i18n } = useTranslation();
@@ -28,12 +29,24 @@ function ContactPage() {
             <p>{t("contactPage.div1.div1.p")}</p>
           </div>
           <div className="w-full flex justify-center items-center text-center  max-[630px]:text-lg">
-            <MdOutlineMailOutline className="text-[red]  mx-1 text-3xl" />
-            <p>saruk.dastkhosh5186@gmail.com</p>
+            <Link
+              href="mailto:saruk.dastkhosh5186@gmail.com"
+              className="flex justify-center items-center text-center"
+              target="_blank"
+            >
+              <MdOutlineMailOutline className="text-[red]  mx-1 text-3xl" />
+              <p>saruk.dastkhosh5186@gmail.com</p>
+            </Link>
           </div>
           <div className="flex justify-center items-center text-center">
-            <FiPhone className="text-[red] mx-1 text-3xl" />
-            <p>{t("contactPage.div1.div2.p")}</p>
+            <Link
+              href="tel:09182481037"
+              className="flex justify-center items-center text-center"
+              target="_blank"
+            >
+              <FiPhone className="text-[red] mx-1 text-3xl" />
+              <p>{t("contactPage.div1.div2.p")}</p>
+            </Link>
           </div>
           {/* <div className="flex justify-center items-center text-center">
             <IoLocationOutline className="text-[red] mx-1 text-3xl" />
