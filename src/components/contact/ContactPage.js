@@ -7,15 +7,22 @@ import { Button, Group, Textarea, TextInput } from "@mantine/core";
 
 import "@/i18n";
 import { useTranslation } from "react-i18next";
+import Iframe from "react-iframe";
 
 function ContactPage() {
   const { t, i18n } = useTranslation();
 
   return (
     <div className="w-full absolute  flex flex-col justify-start items-start text-start px-4 ">
-      <div className="w-full justify-center items-center text-start p-4 text-[gray]">
+      <div className="w-full  justify-center items-center text-start p-4 text-[gray]">
+        <div className="w-full justify-center items-center text-center">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d104216.76514147267!2d46.91495534497158!3d35.286747089671124!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ff997e23b7813db%3A0x8893e51d9ac3ac55!2sSanandaj%2C%20Kurdistan%20Province%2C%20Iran!5e0!3m2!1sen!2s!4v1738044107282!5m2!1sen!2s"
+            className="w-full h-[400px]"
+          />
+        </div>
         <p className="text-2xl my-4 text-justify">{t("contactPage.p")}</p>
-        <div className="grid grid-cols-2 gap-4 text-xl max-[630px]:grid-cols-1">
+        <div className="grid grid-cols-2 gap-4 text-xl max-[760px]:grid-cols-1">
           <div className="flex  justify-center items-center text-center">
             <IoLocationOutline className="text-[red] mx-1 text-3xl" />
             <p>{t("contactPage.div1.div1.p")}</p>
