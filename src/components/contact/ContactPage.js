@@ -206,7 +206,7 @@ function ContactPage() {
         </div>
         <div className="w-full h-2 border-4 bg-[red] my-12"></div>
 
-        <div className="w-full  justify-center items-center text-start p-4 text-[gray]">
+        <div className="w-full  justify-center items-center text-start p-4 text-[gray] mb-12">
           <div className="w-full justify-center items-center text-center">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d104216.76514147267!2d46.91495534497158!3d35.286747089671124!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ff997e23b7813db%3A0x8893e51d9ac3ac55!2sSanandaj%2C%20Kurdistan%20Province%2C%20Iran!5e0!3m2!1sen!2s!4v1738044107282!5m2!1sen!2s"

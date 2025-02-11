@@ -14,7 +14,7 @@ i18next.use(initReactI18next).init({
             v1: "17 years old",
             v2: "Sanandaj",
           },
-          p: "Hello i'm Sarok and i have experienced in web developer .I'm 17 years old .i have watched more than 100 hours for being good in web programmerExperienced Web Developer with passion for creating attractive and interactive websites meeting customer needs andexceeding expectations. ",
+          p: "Hello i'm Sarok and i have experienced in web developer .I'm 17 years old .i have watched more than 100 hours for being good in web programmer Experienced Web Developer with passion for creating attractive and interactive websites meeting customer needs and exceeding expectations. ",
           servicetitle: "my services",
           div2: {
             div1: {
@@ -88,7 +88,7 @@ i18next.use(initReactI18next).init({
             v1: "17 ساله",
             v2: "سنندج",
           },
-          p: "سلام من سروک هستم و در زمینه توسعه وب تجربه دارم. 17 ساله هستم. بیش از 100 ساعت برای خوب بودن در برنامه نویس وب برنامه نویس وب مجرب با اشتیاق برای ایجاد وب سایت های جذاب و تعاملی با نیازهای مشتری و فراتر از انتظارات تماشا کرده ام.",
+          p: "سلام من سروک هستم و در زمینه توسعه وب تجربه دارم. 17 ساله هستم. بیش از 100 ساعت برای خوب بودن در برنامه نویسی وب مجرب با اشتیاق برای ایجاد وب سایت های جذاب و تعاملی با نیازهای مشتری و فراتر از انتظارات تماشا کرده ام.",
           servicetitle: "خدمات من",
           div2: {
             div1: {
