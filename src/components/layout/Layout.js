@@ -43,7 +43,7 @@ function Layout({ children, setLanguage }) {
 
   const [color, setColor] = useState("black");
 
-  const [open, setOpen] = React.useState(false);
+  const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
 
@@ -71,7 +71,7 @@ function Layout({ children, setLanguage }) {
   };
 
   const changeHandler = () => {
-    console.log(color);
+    // console.log(color);
     if (color === "black") {
       setColor("white");
     } else if (color === "white") {
@@ -93,11 +93,13 @@ function Layout({ children, setLanguage }) {
         disableAutoFocus
       >
         <Box
+            onClick={handleClose}
+
           className="w-3/4 h-3/6 flex flex-col justify-center items-center text-center bg-[black]
           max-[1020px]:text-3xl max-[760px]:text-xl text-[gray] relative border-4 border-[gray] rounded-2xl"
         >
           <button
-            onClick={handleClose}
+            // onClick={handleClose}
             className="absolute top-0 right-0 text-3xl flex justify-center items-center text-center mb-4 hover:text-[red]  mx-2"
           >
             <IoMdClose />
@@ -150,15 +152,17 @@ function Layout({ children, setLanguage }) {
         max-[630px]:text-3xl max-[630px]:h-2/6 max-[1020px]:h-3/6    
         lg:justify-between lg:w-full lg:px-8"
           > */}
-          <div className="flex justify-center items-center text-center my-4 text-[gray] hover:text-[red]">
-            <h1 className="text-[red]">{t("title")}</h1>
-            <button onClick={changeHandler} className="mx-4 mb-3">
+          <div className=" text-3xl  flex justify-center items-center text-center  text-[gray] hover:text-[red]">
+            <h1 className="text-[red] flex justify-center text-center items-center mx-1 pt-2">
+              {t("title")}
+            </h1>
+            <button onClick={changeHandler} className="mx-2 p-2">
               {color === "black" ? <IoMoonOutline /> : <MdOutlineWbSunny />}
             </button>
           </div>
           <div className="my-4 text-3xl max-[768px]:flex lg:flex  ">
             {value ? (
-              <div className="lg:flex">
+              <div className="lg:flex mx-1 ">
                 {path === "/" ? (
                   <Link href="/">
                     <IoPersonOutline className="mb-4 hover:text-[red] text-[red] mx-2" />
@@ -265,7 +269,7 @@ function Layout({ children, setLanguage }) {
                   >
                     <Menu.Target>
                       <Button style={{ padding: "0px", width: "0px" }}>
-                        <GrLanguage className="text-3xl hover:text-[red] text-[gray] mx-2 mt-1" />
+                        <GrLanguage className="text-3xl hover:text-[red] text-[gray]  flex justify-center items-center text-center" />
                       </Button>
                     </Menu.Target>
                     <div className="bg-[#ff0000]">
